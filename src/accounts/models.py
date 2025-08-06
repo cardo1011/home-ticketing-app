@@ -1,8 +1,8 @@
 from datetime import datetime
-
+from flask_login import UserMixin
 from src import bcrypt, db
 
-class User(db.Model):
+class User(UserMixin, db.Model):
 
     __tablename__ = "users"
 
