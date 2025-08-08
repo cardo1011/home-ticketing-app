@@ -3,8 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{css_path}}" />
     <title>Registration</title>
-    <h1>Register form</h1>
+    <h1>Register to your household</h1>
+    <form action="">
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="Enter First Name"
+      />
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="Enter Last Name"
+      />
+      <label for="emailAddress">Email Address *</label>
+      <input
+        type="email"
+        id="emailAddress"
+        placeholder="JohnDoe@email.com"
+        required
+        name="emailAddress"
+      />
+      <label for="password" id="passwordLabel">Password *</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        required
+        placeholder="Enter your password"
+      />
+      <label for="passwordConfirmation" id="passwordConfirmationLabel"
+        >Confirm Password *</label
+      >
+      <input
+        type="password"
+        name="passwordConfirmation"
+        id="passwordConfirmation"
+        required
+        placeholder="Enter your password"
+      />
+      <button id="registerSubmit" name="registerSubmit">Register</button>
+    </form>
   </head>
   <body></body>
 </html>
