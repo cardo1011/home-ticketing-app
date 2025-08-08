@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TicketHome</title>
+  </head>
+  <div id="root">
+    <body>
+      <h1>Could you ... when you get a chance?</h1>
+      <form action="">
+        <label for="emailAddress">Email Address *</label>
+        <input
+          type="email"
+          id="emailAddress"
+          placeholder="JohnDoe@email.com"
+          required
+          name="emailAddress"
+        />
+        <label for="password" id="passwordLabel">Password *</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="Enter your password"
+        />
+        <button id="loginSubmit" name="loginSubmit">Sign In</button>
+      </form>
+      <p>
+        <a href="{{url_for('register_new_user')}}">Register As a New User</a>
+      </p>
+    </body>
+  </div>
+</html>
