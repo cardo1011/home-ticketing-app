@@ -9,7 +9,7 @@
   <div id="root">
     <body>
       <h1>Could you ... when you get a chance?</h1>
-      <form action="">
+      <form action="" method="post">
         <label for="emailAddress">Email Address *</label>
         <input
           type="email"
@@ -26,7 +26,9 @@
           required
           placeholder="Enter your password"
         />
-        <button id="loginSubmit" name="loginSubmit">Sign In</button>
+        <button id="loginSubmit" name="loginSubmit" value="submit">
+          Sign In
+        </button>
       </form>
       <p>
         <a href="{{url_for('register_new_user')}}">Register As a New User</a>
