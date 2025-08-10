@@ -1,56 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{css_path}}" />
-    <title>Registration</title>
-    <h1>Register to your household</h1>
-    <form action="">
-      <label for="firstName">First Name</label>
-      <input
-        type="text"
-        name="firstName"
-        id="firstName"
-        placeholder="Enter First Name"
-      />
-      <label for="lastName">Last Name</label>
-      <input
-        type="text"
-        name="lastName"
-        id="lastName"
-        placeholder="Enter Last Name"
-      />
-      <label for="emailAddress">Email Address *</label>
+{% extends "base.html" %} {% block title %}Register{% endblock %} {% block
+content %}
+<h1 class="d-flex justify-content-center">Register to your household</h1>
+<div
+  id="container"
+  class="d-flex justify-content-center align-items-center min-vh-100"
+>
+  <form action="#" method="post" class="">
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="First name"
+          aria-label="First name"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Last name"
+          aria-label="Last name"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
       <input
         type="email"
-        id="emailAddress"
-        placeholder="JohnDoe@email.com"
-        required
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
         name="emailAddress"
       />
-      <label for="password" id="passwordLabel">Password *</label>
-      <input
-        type="password"
-        name="password"
-        id="password"
-        required
-        placeholder="Enter your password"
-      />
-      <label for="passwordConfirmation" id="passwordConfirmationLabel"
-        >Confirm Password *</label
-      >
-      <input
-        type="password"
-        name="passwordConfirmation"
-        id="passwordConfirmation"
-        required
-        placeholder="Enter your password"
-        value="{{email if email}}"
-      />
-      <button id="registerSubmit" name="registerSubmit">Register</button>
-    </form>
-    <p>Already a member? <a href="{{url_for('login_page')}}"> Login Here</a></p>
-  </head>
-  <body></body>
-</html>
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" />
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<!-- <form action="">
+  <label for="firstName">First Name</label>
+  <input
+    type="text"
+    name="firstName"
+    id="firstName"
+    placeholder="Enter First Name"
+  />
+  <label for="lastName">Last Name</label>
+  <input
+    type="text"
+    name="lastName"
+    id="lastName"
+    placeholder="Enter Last Name"
+  />
+  <label for="emailAddress">Email Address *</label>
+  <input
+    type="email"
+    id="emailAddress"
+    placeholder="JohnDoe@email.com"
+    required
+    name="emailAddress"
+  />
+  <label for="password" id="passwordLabel">Password *</label>
+  <input
+    type="password"
+    name="password"
+    id="password"
+    required
+    placeholder="Enter your password"
+  />
+  <label for="passwordConfirmation" id="passwordConfirmationLabel"
+    >Confirm Password *</label
+  >
+  <input
+    type="password"
+    name="passwordConfirmation"
+    id="passwordConfirmation"
+    required
+    placeholder="Enter your password"
+    value="{{email if email}}"
+  />
+  <button id="registerSubmit" name="registerSubmit">Register</button>
+</form>
+<p>Already a member? <a href="{{url_for('login_page')}}"> Login Here</a></p> -->
+{% endblock %}
