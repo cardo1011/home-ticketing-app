@@ -1,0 +1,39 @@
+home-ticketing-app/
+    __init__.py
+    templates/
+        base.html # page that will be the foundation of the whole website
+        home/
+            base.html 
+            homepage.html # will appear when not signed in and routed to "/" or "home"
+            about.html # page showing short examples and explanation of the app
+            register.html # register as a new user and potentially to an existing household
+            login.html
+        dashboard/
+            base.html
+            assigned_task_feed.html # feed of tasks assigned to signed in user
+            assign_tasks.html # creates a task and allows user to assign to household member or self
+        profile/
+            base.html
+            about.html # have to brainstorm more as to what info of the user this will include
+            photos.html 
+            household.html # members of same household (potentiall support multiple households simultaneously )
+            edit.html # grants the ability to update the users account information 
+        settings/
+            base.html
+            privacy.html
+            security.html
+            general.html
+    views/
+        __init__.py
+        home.py
+        dashboard.py
+        profile.py
+        settings.py
+        admin.py # this will be layed out in the future for administrators of the household 
+    static/
+        style.css
+        logo.png
+    models.py
+
+
+does this seem like a good structure for my app?
