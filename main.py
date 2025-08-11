@@ -51,6 +51,10 @@ def login_page():
             redirect(url_for(("logged_in")))
         return render_template("login.html", css_path=css_)
 
+@app.route("/view")
+def view():
+    return render_template("view.html", values=User.query.all())
+
 @app.route("/logout")
 def logout():
     session.pop("emailAddress", None)
